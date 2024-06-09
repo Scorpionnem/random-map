@@ -24,3 +24,4 @@ execute as @a at @a run playsound minecraft:entity.ender_dragon.growl ambient @s
 effect clear @a
 effect give @a slowness 1 100 true
 tag @a[tag=player] add alive
+gamerule showDeathMessages true

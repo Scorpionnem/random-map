@@ -1,6 +1,9 @@
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
 
+execute if score .game game matches 1 as @a if entity @s[tag=!player,tag=!spectator,gamemode=!spectator] run gamemode spectator @s
+
+
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
 
 execute if score .game game matches 0 run data merge entity @e[limit=1,sort=random,type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] {NoAI:1b}
