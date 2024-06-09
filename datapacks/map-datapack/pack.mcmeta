@@ -1,0 +1,14 @@
+{
+  "pack": {
+    "pack_format": 47,
+    "description": "By Scorpionem & Mundi Maps"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "minecraft",
+        "path": "advancement/*"
+      }
+    ]
+  }
+}
