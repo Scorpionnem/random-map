@@ -1,4 +1,5 @@
-
+execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
+execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
 execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
 tp @a[tag=spectator] 0 72 32
@@ -21,4 +22,5 @@ scoreboard players set .button button 0
 tellraw @a {"bold":true,"color":"green","italic":false,"text":"Game starting!"}
 execute as @a at @a run playsound minecraft:entity.ender_dragon.growl ambient @s
 effect clear @a
+effect give @a slowness 1 100 true
 tag @a[tag=player] add alive

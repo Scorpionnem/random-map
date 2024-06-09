@@ -1,5 +1,5 @@
-execute if score .game game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
-execute if score .game game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
+execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
+execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
 
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
 
@@ -36,7 +36,7 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .starting game matches 1 if score .startingtimer game matches 20 run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 2
 
 
-
+    execute if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
     execute if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
