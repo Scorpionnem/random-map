@@ -8,7 +8,7 @@ tp @a 0 80 -5
 worldborder set 83
 
 effect clear @a
-execute as @a[tag=alive] run tellraw @a ["",{"selector":"@s"},{"text":" won the game!","color":"gold"}]
+tellraw @a {"text": "Lime team won the game!","color": "green"}
 tag @a remove alive
 schedule function rdm:game/end/adventure 5t
 execute as @a at @s run playsound minecraft:item.goat_horn.sound.0 ambient @s

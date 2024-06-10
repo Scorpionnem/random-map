@@ -1,8 +1,12 @@
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
 
+execute if score .game game matches 0 as @a[tag=!player,tag=!spectator] run function rdm:team/play
+
 execute if score .game game matches 1 as @a if entity @s[tag=!player,tag=!spectator,gamemode=!spectator] run gamemode spectator @s
 
+execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_wool run function rdm:game/settings/teams/lime
+execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_wool run function rdm:game/settings/teams/purple
 
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
 
@@ -10,7 +14,7 @@ execute if score .game game matches 0 run data merge entity @e[limit=1,sort=rand
 execute if score .game game matches 0 run data merge entity @e[limit=1,sort=random,type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] {Silent:1b}
 
 
-    execute store result bossbar rdm:items max run scoreboard players get .randomtime timer2
+    execute store result bossbar rdm:items max run scoreboard players get .time settings
     execute store result bossbar rdm:items value run scoreboard players get .random2 timer2
 
 
@@ -51,4 +55,13 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
 
     execute if score .game game matches 1 run scoreboard players set .ingame players 0
     execute if score .game game matches 1 as @a[tag=alive] run scoreboard players add .ingame players 1
-    execute if score .game game matches 1 if score .ingame players matches ..1 run function rdm:game/end/end
+    execute if score .game game matches 1 if score .teambutton settings matches 0 if score .ingame players matches ..1 run function rdm:game/end/end
+    
+    execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .purpleingame players 0
+    execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .limeingame players 0
+
+    execute if score .game game matches 1 if score .teambutton settings matches 1 as @a[tag=alive,team=Lime] run scoreboard players add .limeingame players 1
+    execute if score .game game matches 1 if score .teambutton settings matches 1 as @a[tag=alive,team=Purple] run scoreboard players add .purpleingame players 1
+
+    execute if score .game game matches 1 if score .teambutton settings matches 1 if score .limeingame players matches 0 run function rdm:game/end/endpurple
+    execute if score .game game matches 1 if score .teambutton settings matches 1 if score .purpleingame players matches 0 run function rdm:game/end/endlime

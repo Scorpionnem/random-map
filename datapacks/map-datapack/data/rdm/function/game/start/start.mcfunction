@@ -9,13 +9,15 @@ execute as @a[tag=player] run function rdm:game/pillars/spawn
 execute as @a[tag=spectator] run gamemode spectator @s
 execute as @a[tag=player] run gamemode survival @s
 scoreboard players set .game game 1
-scoreboard players set .random timer2 100
+#scoreboard players set .random timer2 60
+scoreboard players operation .random timer2 = .time2 settings
+
 clear @a
 execute as @a run function rdm:give
 bossbar set rdm:items visible true
 bossbar set rdm:items players @a
 worldborder set 63
-worldborder set 3 300
+execute if score .zonebutton settings matches 1 run worldborder set 3 300
 scoreboard players set .starting game 0
 scoreboard players set .startingtimer game 0
 scoreboard players set .button button 0
