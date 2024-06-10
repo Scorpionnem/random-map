@@ -2,3 +2,4 @@ item replace entity @e[type=minecraft:item_display,tag=zonebutton] container.0 w
 playsound minecraft:ui.button.click ambient @a
 playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
 scoreboard players set .zonebutton settings 1
+data modify entity @e[type=text_display,tag=zone,limit=1] text set value '[{"text":"Yes"}]'

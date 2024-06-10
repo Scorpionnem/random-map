@@ -1,2 +1,2 @@
 
-execute at @s run fill ~ ~-1 ~ ~ -64 ~ bedrock
+execute at @s[tag=player] run fill ~ ~-1 ~ ~ -64 ~ bedrock

@@ -6,6 +6,7 @@ bossbar set rdm:items visible false
 effect give @a resistance infinite 100 true
 tp @a 0 80 -5
 worldborder set 100
+worldborder center 0 32
 
 effect clear @a
 tellraw @a {"text": "Purple team won the game!","color": "dark_purple"}
