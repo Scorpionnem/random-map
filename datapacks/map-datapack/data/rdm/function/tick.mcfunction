@@ -1,8 +1,16 @@
 execute if score .game game matches 0 as @a store result score @s ylevel run data get entity @s Pos[1]
-#execute if score .game game matches 0 as @a if score @s ylevel matches ..75 run tp @s 0 80 -5
+execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
+execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
 
-execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
-execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
+execute if score .game game matches 0 as @a if score @s ylevel matches 71 run title @s times 5t 10t 3t
+execute if score .game game matches 0 as @a if score @s ylevel matches 71 run title @s title "\uE000"
+
+
+
+team join Neutral @a[team=!Purple,team=!Lime]
+
+execute if score .game game matches 0 if score .startingtimer game matches 0 if score .starting game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
+execute if score .game game matches 0 if score .startingtimer game matches 0 if score .starting game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
 
 execute if score .game game matches 0 as @a[tag=!player,tag=!spectator] run function rdm:team/play
 
@@ -52,9 +60,9 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
 
 
 
-
+    execute as @a if score @s bye matches 1.. run function rdm:game/bye
     execute as @a if score @s death matches 1.. run function rdm:game/died
-        execute as @a if score @s bye matches 1.. run function rdm:game/bye
+    
 
     execute if score .game game matches 1 run scoreboard players set .ingame players 0
     execute if score .game game matches 1 as @a[tag=alive] run scoreboard players add .ingame players 1
@@ -68,3 +76,5 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
 
     execute if score .game game matches 1 if score .teambutton settings matches 1 if score .limeingame players matches 0 run function rdm:game/end/endpurple
     execute if score .game game matches 1 if score .teambutton settings matches 1 if score .purpleingame players matches 0 run function rdm:game/end/endlime
+
+    execute if score .game game matches 1 if score .glowing game matches 1 run effect give @a[tag=alive] glowing infinite 1 true

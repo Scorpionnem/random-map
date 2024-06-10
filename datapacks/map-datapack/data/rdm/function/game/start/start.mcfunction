@@ -1,6 +1,7 @@
 execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
 execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
+fill 11 90 3 -11 55 3 barrier
 execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
@@ -16,6 +17,7 @@ clear @a
 execute as @a run function rdm:give
 bossbar set rdm:items visible true
 bossbar set rdm:items players @a
+execute at @e[sort=random,limit=1,type=marker,tag=pillar] run worldborder center ~ ~
 worldborder set 59
 execute if score .zonebutton settings matches 1 run worldborder set 3 300
 scoreboard players set .starting game 0
@@ -27,3 +29,9 @@ effect clear @a
 effect give @a slowness 1 100 true
 tag @a[tag=player] add alive
 gamerule showDeathMessages true
+gamerule fallDamage true
+team modify Lime collisionRule always
+team modify Purple collisionRule always
+team modify Neutral collisionRule always
+
+schedule function rdm:game/glowing 300s

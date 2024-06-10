@@ -6,9 +6,22 @@ bossbar set rdm:items visible false
 effect give @a resistance infinite 100 true
 tp @a 0 80 -5
 worldborder set 100
+worldborder center 0 32
 
+scoreboard players set .glowing game 0
 effect clear @a
 execute as @a[tag=alive] run tellraw @a ["",{"selector":"@s"},{"text":" won the game!","color":"gold"}]
+item replace entity @a[tag=alive] armor.head with paper[max_stack_size=1,custom_name='{"color":"gold","italic":false,"text":"Winner\'s trophy"}',custom_model_data=11,enchantments={levels:{"minecraft:binding_curse":1},show_in_tooltip:false},enchantment_glint_override=false] 1
 tag @a remove alive
 schedule function rdm:game/end/adventure 5t
 execute as @a at @s run playsound minecraft:item.goat_horn.sound.0 ambient @s
+place template minecraft:lobby -10 56 -13
+setblock -10 89 -13 air
+gamerule fallDamage false
+execute if score .teambutton settings matches 1 run setblock -1 79 -7 lime_wool
+execute if score .teambutton settings matches 1 run setblock 1 79 -7 purple_wool
+team modify Lime collisionRule never
+team modify Purple collisionRule never
+team modify Neutral collisionRule never
+fill 11 90 3 -11 55 3 barrier
+schedule clear rdm:game/glowing

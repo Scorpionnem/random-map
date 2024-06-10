@@ -1,0 +1,1 @@
+scoreboard players set .glowing game 1
