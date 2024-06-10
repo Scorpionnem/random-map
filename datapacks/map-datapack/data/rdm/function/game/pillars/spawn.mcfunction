@@ -1,5 +1,5 @@
 scoreboard players set .playerspillars players 0
-execute as @a run scoreboard players add .playerspillars players 1
+execute as @a[tag=player] run scoreboard players add .playerspillars players 1
 kill @e[type=marker,tag=pillar]
 
 

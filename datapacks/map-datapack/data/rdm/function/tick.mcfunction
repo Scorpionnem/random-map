@@ -1,3 +1,6 @@
+execute if score .game game matches 0 as @a store result score @s ylevel run data get entity @s Pos[1]
+execute if score .game game matches 0 as @a if score @s ylevel matches ..75 run tp @s 0 80 -5
+
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!player] at @s if block ~ ~-1 ~ minecraft:red_concrete run function rdm:team/play
 execute if score .game game matches 0 if score .startingtimer game matches 0 as @a[tag=!spectator] at @s if block ~ ~-1 ~ minecraft:light_blue_concrete run function rdm:team/spectate
 

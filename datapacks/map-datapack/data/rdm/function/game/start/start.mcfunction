@@ -16,7 +16,7 @@ clear @a
 execute as @a run function rdm:give
 bossbar set rdm:items visible true
 bossbar set rdm:items players @a
-worldborder set 63
+worldborder set 59
 execute if score .zonebutton settings matches 1 run worldborder set 3 300
 scoreboard players set .starting game 0
 scoreboard players set .startingtimer game 0
