@@ -5,3 +5,4 @@ scoreboard players set .teambutton settings 1
 setblock -1 79 -7 lime_wool
 setblock 1 79 -7 purple_wool
 tellraw @a {"text": "Teams mode enabled!","color": "red"}
+function rdm:game/settings/teams/sort
