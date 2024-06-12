@@ -1,6 +1,12 @@
 execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
 execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
+
+scoreboard objectives remove ylevel
+scoreboard objectives add ylevel dummy
+
+
+
 fill 11 90 3 -11 55 3 barrier
 execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
 tp @a[tag=spectator] 0 72 32
@@ -18,7 +24,11 @@ clear @a
 execute as @a run function rdm:give
 bossbar set rdm:items visible true
 bossbar set rdm:items players @a
-execute at @e[sort=random,limit=1,type=marker,tag=pillar] run worldborder center ~ ~
+
+execute as @e[sort=random,limit=1,type=marker,tag=pillar] run tag @s add middle
+execute at @e[type=marker,tag=middle,tag=pillar] run worldborder center ~ ~
+
+
 worldborder set 59
 execute if score .zonebutton settings matches 1 run worldborder set 3 300
 scoreboard players set .starting game 0
@@ -27,7 +37,9 @@ scoreboard players set .button button 0
 tellraw @a {"bold":true,"color":"green","italic":false,"text":"Game starting!"}
 execute as @a at @a run playsound minecraft:entity.ender_dragon.growl ambient @s
 effect clear @a
-effect give @a slowness 1 100 true
+effect give @a slowness 2 100 true
+execute as @a run attribute @s minecraft:generic.jump_strength base set 0
+schedule function rdm:game/start/start/starting 2s
 tag @a[tag=player] add alive
 gamerule showDeathMessages true
 gamerule fallDamage true

@@ -7,6 +7,7 @@ effect give @a resistance infinite 100 true
 tp @a 0 80 -5
 worldborder set 100
 worldborder center 0 32
+kill @e[tag=border,type=item_display]
 
 scoreboard players set .glowing game 0
 effect clear @a
@@ -25,3 +26,4 @@ team modify Purple collisionRule never
 team modify Neutral collisionRule never
 fill 11 90 3 -11 55 3 barrier
 schedule clear rdm:game/glowing
+schedule clear rdm:game/border/moove/moove

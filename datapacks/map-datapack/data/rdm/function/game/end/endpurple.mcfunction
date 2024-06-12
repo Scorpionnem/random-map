@@ -25,3 +25,4 @@ team modify Purple collisionRule never
 team modify Neutral collisionRule never
 scoreboard players set .glowing game 0
 schedule clear rdm:game/glowing
+schedule clear rdm:game/border/moove/moove

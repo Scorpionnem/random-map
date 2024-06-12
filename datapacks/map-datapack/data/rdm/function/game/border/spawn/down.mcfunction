@@ -1,0 +1,2 @@
+execute at @e[type=marker,tag=middle,tag=pillar] run summon item_display ~ -63 ~ {Tags:["border","down"],brightness:{sky:10,block:10},item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":12}},Glowing:1b}
+execute at @e[tag=border,tag=down] run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 barrier replace air

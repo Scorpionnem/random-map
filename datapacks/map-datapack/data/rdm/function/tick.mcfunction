@@ -1,11 +1,20 @@
-execute if score .game game matches 0 as @a store result score @s ylevel run data get entity @s Pos[1]
+execute as @a store result score @s ylevel run data get entity @s Pos[1]
+execute as @e[tag=border] store result score @s ylevel run data get entity @s Pos[1]
+
+
+execute as @a if score @s ylevel > @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
+execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
+
+
+
+
 execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
 execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
 
 execute if score .game game matches 0 as @a if score @s ylevel matches 71 run title @s times 5t 10t 3t
 execute if score .game game matches 0 as @a if score @s ylevel matches 71 run title @s title "\uE000"
 
-
+execute if score .teambutton settings matches 0 run team leave @a[team=!Neutral]
 
 team join Neutral @a[team=!Purple,team=!Lime]
 
