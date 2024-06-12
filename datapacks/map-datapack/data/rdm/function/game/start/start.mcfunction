@@ -6,9 +6,10 @@ execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
 function rdm:resetgame/resetpillars
-execute as @a[tag=player] run function rdm:game/pillars/spawn
 execute as @a[tag=spectator] run gamemode spectator @s
 execute as @a[tag=player] run gamemode survival @s
+execute as @a[tag=player,gamemode=survival] run function rdm:game/pillars/spawn
+
 scoreboard players set .game game 1
 #scoreboard players set .random timer2 60
 scoreboard players operation .random timer2 = .time2 settings

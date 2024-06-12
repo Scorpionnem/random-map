@@ -7230,6 +7230,118 @@
       }
       }
   ]
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:oxidized_copper_bulb"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:oxidized_copper_trapdoor"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:oxidized_copper_door"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:oxidized_copper_grate"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:tuff_brick_slab"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:tuff_brick_wall"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:chiseled_tuff_bricks"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:copper_grate"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:chiseled_copper"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:copper_door"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:copper_trapdoor"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:copper_bulb"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:oxidized_chiseled_copper"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:wind_charge"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:music_disc_precipice"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:music_disc_creator"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:music_disc_creator_music_box"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:mace"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:ominous_bottle"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:heavy_core"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:breeze_rod"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:flow_armor_trim_smithing_template"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:trial_key"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:ominous_trial_key"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:crafter"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:vault"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:breeze_spawn_egg"
+},
+{
+  "type": "minecraft:item",
+  "name": "minecraft:bogged_spawn_egg"
 }
       ]
     }
