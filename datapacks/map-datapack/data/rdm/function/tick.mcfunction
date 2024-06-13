@@ -5,12 +5,12 @@ execute as @e[tag=border] store result score @s ylevel run data get entity @s Po
 execute as @a if score @s ylevel >= @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 
-execute as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
-execute as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
+execute if score .game game matches 0 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
+execute if score .game game matches 0 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 
 
-#execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
-#execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
+execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
+execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
 
 #execute if score .game game matches 0 as @a if score @s ylevel matches 67 run title @s times 5t 10t 3t
 #execute if score .game game matches 0 as @a if score @s ylevel matches 67 run title @s title "\uE000"
