@@ -4,6 +4,9 @@ function rdm:game/start/resetmap
 
 
 
+tp @a[team=Lime] 0 72 51
+tp @a[team=Purple] 0 72 13
+
 
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]

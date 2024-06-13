@@ -90,15 +90,30 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
 
     execute if score .game game matches 1 run scoreboard players set .ingame players 0
     execute if score .game game matches 1 as @a[tag=alive] run scoreboard players add .ingame players 1
-    execute if score .game game matches 1 if score .teambutton settings matches 0 if score .ingame players matches ..1 run function rdm:game/end/end
+    execute if score .game game matches 1 if score .ffasolo settings matches 1 if score .ingame players matches ..1 run function rdm:game/end/end
     
     execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .purpleingame players 0
     execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .limeingame players 0
 
+    execute if score .game game matches 1 if score .capture settings matches 1 run scoreboard players set .purpleingame players 0
+    execute if score .game game matches 1 if score .capture settings matches 1 run scoreboard players set .limeingame players 0
+
+
     execute if score .game game matches 1 if score .teambutton settings matches 1 as @a[tag=alive,team=Lime] run scoreboard players add .limeingame players 1
     execute if score .game game matches 1 if score .teambutton settings matches 1 as @a[tag=alive,team=Purple] run scoreboard players add .purpleingame players 1
 
+    execute if score .game game matches 1 if score .capture settings matches 1 as @a[tag=alive,team=Lime] run scoreboard players add .limeingame players 1
+    execute if score .game game matches 1 if score .capture settings matches 1 as @a[tag=alive,team=Purple] run scoreboard players add .purpleingame players 1
+
+
+
     execute if score .game game matches 1 if score .teambutton settings matches 1 if score .limeingame players matches 0 run function rdm:game/end/endpurple
     execute if score .game game matches 1 if score .teambutton settings matches 1 if score .purpleingame players matches 0 run function rdm:game/end/endlime
+
+    execute if score .game game matches 1 if score .capture settings matches 1 if score .limeingame players matches 0 run function rdm:game/end/endpurple
+    execute if score .game game matches 1 if score .capture settings matches 1 if score .purpleingame players matches 0 run function rdm:game/end/endlime
+
+
+
 
     execute if score .game game matches 1 if score .glowing game matches 1 run effect give @a[tag=alive] glowing infinite 1 true

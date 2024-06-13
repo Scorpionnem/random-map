@@ -23,6 +23,10 @@ execute if score .teambutton settings matches 1 unless score .players players ma
 execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
 
 #Capture process
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
 
 
 
