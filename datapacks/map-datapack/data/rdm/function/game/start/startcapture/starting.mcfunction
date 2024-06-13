@@ -1,0 +1,1 @@
+execute as @a run attribute @s minecraft:generic.jump_strength base set 0.41999998688697815

@@ -22,6 +22,10 @@ execute if score .teambutton settings matches 1 unless score .players players ma
 execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
 execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
 
+#Capture process
+
+
+
 
 #Stops from starting if too many or not enough players
 execute if score .players players matches ..1 run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not enough players! (2+)"}

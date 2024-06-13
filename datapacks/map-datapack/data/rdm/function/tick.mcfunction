@@ -9,13 +9,13 @@ execute as @a[tag=spectator] run title @s actionbar {"text": "You will be specta
 execute as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 
 
-execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
-execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
+#execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
+#execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run effect give @s slow_falling 1 1 true
 
 #execute if score .game game matches 0 as @a if score @s ylevel matches 67 run title @s times 5t 10t 3t
 #execute if score .game game matches 0 as @a if score @s ylevel matches 67 run title @s title "\uE000"
 
-execute if score .teambutton settings matches 0 run team leave @a[team=!Neutral]
+execute unless score .ffasolo settings matches 0 run team leave @a[team=!Neutral]
 
 team join Neutral @a[team=!Purple,team=!Lime]
 
@@ -28,6 +28,12 @@ execute if score .game game matches 1 as @a if entity @s[tag=!player,tag=!specta
 
 execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_wool run function rdm:game/settings/teams/lime
 execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_wool run function rdm:game/settings/teams/purple
+
+execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_wool run function rdm:game/settings/teams/lime
+execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_wool run function rdm:game/settings/teams/purple
+
+
+
 
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
 
@@ -64,10 +70,18 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .starting game matches 1 if score .startingtimer game matches 20 run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 2
 
 
-    execute if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
-    execute if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
+    execute if score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/startcapture/start2
+    execute if score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/startcapture/start
+    
+    execute unless score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
+    execute unless score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
+
+    
+    
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
+    execute if score .capture settings matches 1 as @a run scoreboard players remove @s respawn 1
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 1 run function rdm:game/respawn
 
 
     execute as @a if score @s bye matches 1.. run function rdm:game/bye
