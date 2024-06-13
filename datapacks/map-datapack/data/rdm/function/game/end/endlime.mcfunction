@@ -15,7 +15,7 @@ item replace entity @a[team=Lime] armor.head with paper[max_stack_size=1,custom_
 tag @a remove alive
 schedule function rdm:game/end/adventure 5t
 execute as @a at @s run playsound minecraft:item.goat_horn.sound.0 ambient @s
-place template minecraft:lobby -10 56 -13
+#place template minecraft:lobby -10 56 -13
 setblock -10 89 -13 air
 gamerule fallDamage false
 execute if score .teambutton settings matches 1 run setblock -1 79 -7 lime_wool
