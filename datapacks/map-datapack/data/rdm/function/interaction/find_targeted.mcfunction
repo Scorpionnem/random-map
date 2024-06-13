@@ -21,8 +21,10 @@ execute if score .zonebutton settings matches 1 if score #bool interaction match
 
 execute if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=time] at @s run function rdm:game/settings/time/press
 
-execute if score #bool interaction matches 1 as @s[tag=gamemode,type=interaction,tag=caca] run function rdm:game/settings/gamemode/switch/rightclick
+execute if score #bool interaction matches 1 as @s[tag=gamemode,type=interaction] run function rdm:game/settings/gamemode/switch/rightclick
 
+execute if score #bool interaction matches 1 as @s[tag=capturelime,type=interaction] on target as @s[team=Purple] run function rdm:game/settings/gamemode/capture/capturelime
+execute if score #bool interaction matches 1 as @s[tag=capturepurple,type=interaction] on target as @s[team=Lime] run function rdm:game/settings/gamemode/capture/capturepurple
 
 
 execute if score #bool interaction matches 1 run data remove entity @s interaction

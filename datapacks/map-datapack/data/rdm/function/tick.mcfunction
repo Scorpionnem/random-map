@@ -1,6 +1,10 @@
 execute as @a store result score @s ylevel run data get entity @s Pos[1]
 execute as @e[tag=border] store result score @s ylevel run data get entity @s Pos[1]
 
+execute if score .game game matches 1 if score .capture settings matches 1 at @a[tag=capturedlime,limit=1] run tp @e[tag=capturelime,type=item_display] ~ ~3 ~ 0 0
+execute if score .game game matches 1 if score .capture settings matches 1 at @a[tag=capturedpurple,limit=1] run tp @e[tag=capturepurple,type=item_display] ~ ~3 ~ 0 0
+
+
 
 execute as @a if score @s ylevel >= @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
@@ -81,7 +85,14 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
     execute if score .capture settings matches 1 as @a run scoreboard players remove @s respawn 1
-    execute if score .capture settings matches 1 as @a if score @s respawn matches 1 run function rdm:game/respawn
+    execute if score .capture settings matches 1 if score .lime capture matches 1 as @a[team=Lime,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
+    execute if score .capture settings matches 1 if score .purple capture matches 1 as @a[team=Purple,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
+
+    execute if score .capture settings matches 1 if score .lime capture matches 0 as @a[team=Lime,tag=alive] if score @s death matches 1.. run tag @s remove alive
+    execute if score .capture settings matches 1 if score .purple capture matches 0 as @a[team=Purple,tag=alive] if score @s death matches 1.. run tag @s remove alive
+
+    execute as @e[tag=capturepurple,type=interaction] at @s if entity @a[tag=capturedlime,distance=..3] run function rdm:game/settings/gamemode/capture/capturedlime
+    execute as @e[tag=capturelime,type=interaction] at @s if entity @a[tag=capturedpurple,distance=..3] run function rdm:game/settings/gamemode/capture/capturedpurple
 
 
     execute as @a if score @s bye matches 1.. run function rdm:game/bye

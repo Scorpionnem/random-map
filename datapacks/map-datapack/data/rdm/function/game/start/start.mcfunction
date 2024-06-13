@@ -58,6 +58,7 @@ gamerule fallDamage true
 team modify Lime collisionRule always
 team modify Purple collisionRule always
 team modify Neutral collisionRule always
-
+kill @e[tag=capturelime]
+kill @e[tag=capturepurple]
 execute if score .teambutton settings matches 1 run schedule function rdm:game/glowing 300s
 execute if score .ffasolo settings matches 1 run schedule function rdm:game/glowing 300s

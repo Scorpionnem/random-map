@@ -3,6 +3,11 @@ execute as @a run attribute @s minecraft:player.block_interaction_range base set
 function rdm:game/start/resetmap
 
 
+kill @e[tag=capturelime]
+kill @e[tag=capturepurple]
+
+scoreboard players set .purple capture 1
+scoreboard players set .lime capture 1
 
 tp @a[team=Lime] 0 72 51
 tp @a[team=Purple] 0 72 13
@@ -55,4 +60,5 @@ gamerule fallDamage true
 team modify Lime collisionRule always
 team modify Purple collisionRule always
 team modify Neutral collisionRule always
-
+function rdm:game/start/startcapture/spawnlime
+function rdm:game/start/startcapture/spawnpurple
