@@ -19,7 +19,7 @@ execute if score .zonebutton settings matches 1 if score #bool interaction match
 
 execute if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=time] at @s run function rdm:game/settings/time/press2
 
-execute if score #bool interaction matches 1 as @s[tag=gamemode,type=interaction] run function rdm:game/settings/gamemode/switch/leftclick
+execute if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=gamemode,type=interaction] run function rdm:game/settings/gamemode/switch/leftclick
 
 
 execute if score #bool interaction matches 1 as @s[tag=capturelime,type=interaction,tag=!locked] on attacker as @s[team=Purple] run function rdm:game/settings/gamemode/capture/capturelime

@@ -1,5 +1,6 @@
 scoreboard players remove .gamemode gamemode 1
 execute if score .gamemode gamemode matches ..0 run scoreboard players set .gamemode gamemode 3
+playsound minecraft:ui.button.click ambient @a
 
 function rdm:game/settings/teams/disable
 function rdm:game/settings/gamemode/ffa/disable
