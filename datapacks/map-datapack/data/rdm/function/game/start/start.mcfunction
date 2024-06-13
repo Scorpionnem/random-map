@@ -14,7 +14,7 @@ kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!in
 
 function rdm:resetgame/resetpillars
 
-
+fill -50 120 3 50 -10 3 barrier
 
 
 execute as @a[tag=spectator] run gamemode spectator @s

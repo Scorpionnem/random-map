@@ -18,8 +18,7 @@ execute as @a at @s run playsound minecraft:item.goat_horn.sound.0 ambient @s
 #place template minecraft:lobby -10 56 -13
 setblock -10 89 -13 air
 gamerule fallDamage false
-execute if score .teambutton settings matches 1 run setblock -1 79 -7 lime_wool
-execute if score .teambutton settings matches 1 run setblock 1 79 -7 purple_wool
+
 team modify Lime collisionRule never
 team modify Purple collisionRule never
 team modify Neutral collisionRule never

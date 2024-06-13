@@ -12,6 +12,7 @@ scoreboard players set .lime capture 1
 tp @a[team=Lime] 0 72 51
 tp @a[team=Purple] 0 72 13
 
+fill -50 120 3 50 -10 3 barrier
 
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
