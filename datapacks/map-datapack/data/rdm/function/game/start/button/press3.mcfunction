@@ -35,7 +35,7 @@ execute if score .capture settings matches 1 unless score .players players match
 execute if score .players players matches ..1 run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not enough players! (2+)"}
 execute if score .players players matches ..1 run function rdm:game/start/button/press
 
-execute if score .players players matches 26.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Too many players! (11 Max)"}
+execute if score .players players matches 26.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Too many players! (25 Max)"}
 execute if score .players players matches 26.. run function rdm:game/start/button/press
 
 #stops from starting not everyone in a team

@@ -9,8 +9,8 @@ kill @e[tag=capturepurple]
 scoreboard players set .purple capture 1
 scoreboard players set .lime capture 1
 
-tp @a[team=Lime] 0 72 51
-tp @a[team=Purple] 0 72 13
+spreadplayers 0 52 1 2 false @a[team=Lime]
+spreadplayers 0 12 1 2 false @a[team=Purple]
 
 fill -50 120 3 50 -10 3 barrier
 
