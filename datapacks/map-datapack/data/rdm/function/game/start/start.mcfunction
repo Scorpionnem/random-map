@@ -37,8 +37,16 @@ execute if score .teambutton settings matches 1 at @e[type=marker,tag=middle,tag
 execute if score .ffasolo settings matches 1 as @e[sort=random,limit=1,type=marker,tag=pillar] run tag @s add middle
 execute if score .ffasolo settings matches 1 at @e[type=marker,tag=middle,tag=pillar] run worldborder center ~ ~
 
+tag @a[tag=player] add alive
 
-worldborder set 59
+execute as @a[tag=alive] run scoreboard players add .ingame players 1
+
+execute if score .ingame players matches ..9 run worldborder set 59
+execute if score .ingame players matches 10.. run worldborder set 80
+
+
+
+
 execute if score .zonebutton settings matches 1 if score .teambutton settings matches 1 run worldborder set 3 300
 execute if score .zonebutton settings matches 1 if score .ffasolo settings matches 1 run worldborder set 3 300
 
@@ -52,7 +60,6 @@ effect clear @a
 effect give @a slowness 2 100 true
 execute as @a run attribute @s minecraft:generic.jump_strength base set 0
 schedule function rdm:game/start/start/starting 2s
-tag @a[tag=player] add alive
 gamerule showDeathMessages true
 gamerule fallDamage true
 team modify Lime collisionRule always

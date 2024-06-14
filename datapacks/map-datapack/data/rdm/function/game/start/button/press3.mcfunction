@@ -11,22 +11,22 @@ execute if score .teambutton settings matches 1 run scoreboard players set .noti
 execute if score .teambutton settings matches 1 as @a[team=Neutral,tag=player] run scoreboard players add .notinateam players 1
 
 #FFA SOLO PROCESS
-execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
-execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
-execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. run scoreboard players set .starting game 1
-execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. run scoreboard players set .startingtimer game 60
+execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
+execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
+execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. run scoreboard players set .starting game 1
+execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. run scoreboard players set .startingtimer game 60
 
 #FFA TEAMS PROCESS
-execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
-execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
-execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
-execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
+execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
+execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
+execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
+execute if score .teambutton settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
 
 #Capture process
-execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
-execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
-execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
-execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 12.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. at @e[tag=button,type=interaction] run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.2
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. run scoreboard players set .starting game 1
+execute if score .capture settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. unless score .notinateam players matches 1.. run scoreboard players set .startingtimer game 60
 
 
 
@@ -35,8 +35,8 @@ execute if score .capture settings matches 1 unless score .players players match
 execute if score .players players matches ..1 run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not enough players! (2+)"}
 execute if score .players players matches ..1 run function rdm:game/start/button/press
 
-execute if score .players players matches 12.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Too many players! (11 Max)"}
-execute if score .players players matches 12.. run function rdm:game/start/button/press
+execute if score .players players matches 26.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Too many players! (11 Max)"}
+execute if score .players players matches 26.. run function rdm:game/start/button/press
 
 #stops from starting not everyone in a team
 execute if score .notinateam players matches 1.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not everyone is in a team!"}
