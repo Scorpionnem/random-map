@@ -7,8 +7,8 @@ scoreboard players set .button button 1
 scoreboard players set .players players 0
 execute as @a[tag=player] run scoreboard players add .players players 1
 
-execute if score .teambutton settings matches 1 run scoreboard players set .notinateam players 0
-execute if score .teambutton settings matches 1 as @a[team=Neutral,tag=player] run scoreboard players add .notinateam players 1
+scoreboard players set .notinateam players 0
+execute as @a[team=Neutral,tag=player] run scoreboard players add .notinateam players 1
 
 #FFA SOLO PROCESS
 execute if score .ffasolo settings matches 1 unless score .players players matches ..1 unless score .players players matches 26.. at @e[tag=button,type=interaction] run playsound minecraft:ui.button.click ambient @a

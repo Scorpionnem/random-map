@@ -9,8 +9,9 @@ kill @e[tag=capturepurple]
 scoreboard players set .purple capture 1
 scoreboard players set .lime capture 1
 
-spreadplayers 0 52 1 2 false @a[team=Lime]
-spreadplayers 0 12 1 2 false @a[team=Purple]
+
+
+
 
 fill -50 120 3 50 -10 3 barrier
 
@@ -57,6 +58,11 @@ schedule function rdm:game/start/startcapture/starting 2s
 
 gamerule showDeathMessages true
 gamerule fallDamage true
+
+spreadplayers 0 52 1 2 false @a[team=Lime]
+spreadplayers 0 12 1 2 false @a[team=Purple]
+
+
 
 team modify Lime collisionRule always
 team modify Purple collisionRule always

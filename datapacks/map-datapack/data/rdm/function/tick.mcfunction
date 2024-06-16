@@ -91,8 +91,8 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .capture settings matches 1 if score .lime capture matches 0 as @a[team=Lime,tag=alive] if score @s death matches 1.. run tag @s remove alive
     execute if score .capture settings matches 1 if score .purple capture matches 0 as @a[team=Purple,tag=alive] if score @s death matches 1.. run tag @s remove alive
 
-    execute as @e[tag=capturepurple,type=interaction] at @s if entity @a[tag=capturedlime,distance=..3] run function rdm:game/settings/gamemode/capture/capturedlime
-    execute as @e[tag=capturelime,type=interaction] at @s if entity @a[tag=capturedpurple,distance=..3] run function rdm:game/settings/gamemode/capture/capturedpurple
+    execute as @e[tag=capturepurple,type=interaction] at @s as @a[tag=capturedlime,distance=..3] run function rdm:game/settings/gamemode/capture/capturedlime
+    execute as @e[tag=capturelime,type=interaction] at @s as @a[tag=capturedpurple,distance=..3] run function rdm:game/settings/gamemode/capture/capturedpurple
 
 
     execute as @a if score @s bye matches 1.. run function rdm:game/bye
