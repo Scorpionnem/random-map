@@ -41,9 +41,8 @@ execute if score .capture settings matches 1 if score .game game matches 0 as @a
 
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
 
-execute if score .game game matches 0 run data merge entity @e[limit=1,sort=random,type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] {NoAI:1b}
-execute if score .game game matches 0 run data merge entity @e[limit=1,sort=random,type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] {Silent:1b}
-
+execute if score .game game matches 0 as @e[type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] run data merge entity @s {NoAI:1b}
+execute if score .game game matches 0 as @e[type=!marker,type=!interaction,type=!minecraft:text_display,type=!minecraft:item_display] run data merge entity @s {Silent:1b}
 
     execute store result bossbar rdm:items max run scoreboard players get .time settings
     execute store result bossbar rdm:items value run scoreboard players get .random2 timer2

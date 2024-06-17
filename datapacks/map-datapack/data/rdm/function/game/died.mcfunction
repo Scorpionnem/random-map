@@ -13,3 +13,5 @@ tag @s remove capturedpurple
 
 execute as @s[tag=capturedlime] if score .capture settings matches 1 run tag @e[tag=capturelime,type=interaction] remove locked
 execute as @s[tag=capturedpurple] if score .capture settings matches 1 run tag @e[tag=capturepurple,type=interaction] remove locked
+
+tp @s 0 75 32

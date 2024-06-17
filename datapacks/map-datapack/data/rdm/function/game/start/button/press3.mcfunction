@@ -39,8 +39,8 @@ execute if score .players players matches 26.. run tellraw @a {"bold":true,"colo
 execute if score .players players matches 26.. run function rdm:game/start/button/press
 
 #stops from starting not everyone in a team
-execute if score .notinateam players matches 1.. run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not everyone is in a team!"}
-execute if score .notinateam players matches 1.. run function rdm:game/start/button/press
+execute if score .notinateam players matches 1.. unless score .ffasolo settings matches 1 run tellraw @a {"bold":true,"color":"red","italic":false,"text":"Not everyone is in a team!"}
+execute if score .notinateam players matches 1.. unless score .ffasolo settings matches 1 run function rdm:game/start/button/press
 
 #Starts the countdown
 execute if score .starting game matches 1 if score .startingtimer game matches 60 run tellraw @a {"bold":true,"color":"green","italic":false,"text":"3"}

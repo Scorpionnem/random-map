@@ -69,3 +69,5 @@ kill @e[tag=capturelime]
 kill @e[tag=capturepurple]
 execute if score .teambutton settings matches 1 run schedule function rdm:game/glowing 300s
 execute if score .ffasolo settings matches 1 run schedule function rdm:game/glowing 300s
+execute if score .teambutton settings matches 1 as @a[team=Lime] at @s run setblock ~ ~-1 ~ lime_wool
+execute if score .teambutton settings matches 1 as @a[team=Purple] at @s run setblock ~ ~-1 ~ purple_wool
