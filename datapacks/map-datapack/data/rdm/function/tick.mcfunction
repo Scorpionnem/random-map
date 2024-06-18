@@ -66,11 +66,11 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
 
 
     execute if score .starting game matches 1 if score .startingtimer game matches 40 run tellraw @a {"bold":true,"color":"green","italic":false,"text":"2"}
-    execute if score .starting game matches 1 if score .startingtimer game matches 40 run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 1.7
+    execute if score .starting game matches 1 if score .startingtimer game matches 40 run playsound minecraft:block.note_block.banjo ambient @a 0 80 -2 1 1.7
 
 
     execute if score .starting game matches 1 if score .startingtimer game matches 20 run tellraw @a {"bold":true,"color":"green","italic":false,"text":"1"}
-    execute if score .starting game matches 1 if score .startingtimer game matches 20 run playsound minecraft:block.note_block.banjo ambient @a ~ ~ ~ 1 2
+    execute if score .starting game matches 1 if score .startingtimer game matches 20 run playsound minecraft:block.note_block.banjo ambient @a 0 80 -2 1 2
 
 
     execute if score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/startcapture/start2
