@@ -41,7 +41,8 @@ bossbar set rdm:items visible true
 bossbar set rdm:items players @a
 
 
-worldborder set 59
+worldborder set 57
+
 
 scoreboard players set .starting game 0
 scoreboard players set .startingtimer game 0

@@ -25,6 +25,8 @@ execute if score #bool interaction matches 1 if score .starting game matches 0 a
 execute if score #bool interaction matches 1 as @s[tag=capturelime,type=interaction,tag=!locked] on attacker as @s[team=Purple] run function rdm:game/settings/gamemode/capture/capturelime
 execute if score #bool interaction matches 1 as @s[tag=capturepurple,type=interaction,tag=!locked] on attacker as @s[team=Lime] run function rdm:game/settings/gamemode/capture/capturepurple
 
+execute if score #bool interaction matches 1 as @s[tag=stats,type=interaction] on attacker as @s run function rdm:stats/set
+
 
 
 execute if score #bool interaction matches 1 run data remove entity @s attack

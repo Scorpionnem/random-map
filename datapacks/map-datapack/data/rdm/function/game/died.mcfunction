@@ -15,3 +15,5 @@ execute as @s[tag=capturedlime] if score .capture settings matches 1 run tag @e[
 execute as @s[tag=capturedpurple] if score .capture settings matches 1 run tag @e[tag=capturepurple,type=interaction] remove locked
 
 tp @s 0 75 32
+
+scoreboard players add @s deathstat 1
