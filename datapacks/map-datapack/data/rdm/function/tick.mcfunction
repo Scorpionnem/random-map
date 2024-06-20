@@ -1,3 +1,6 @@
+    execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
+    execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
+
 execute as @a store result score @s ylevel run data get entity @s Pos[1]
 execute as @e[tag=border] store result score @s ylevel run data get entity @s Pos[1]
 
@@ -9,8 +12,6 @@ execute if score .game game matches 1 if score .capture settings matches 1 at @a
 execute as @a if score @s ylevel >= @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 
-execute if score .game game matches 0 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
-execute if score .game game matches 0 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 
 
 execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run tp @s 0 80 -5
@@ -90,6 +91,10 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
     execute if score .capture settings matches 1 as @a run scoreboard players remove @s respawn 1
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 40..60 run title @s actionbar {"text": "Respawning in 3"}
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 20..40 run title @s actionbar {"text": "Respawning in 2"}
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 0..20 run title @s actionbar {"text": "Respawning in 1"}
+
     execute if score .capture settings matches 1 if score .lime capture matches 1 as @a[team=Lime,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
     execute if score .capture settings matches 1 if score .purple capture matches 1 as @a[team=Purple,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
 
@@ -135,3 +140,4 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .game game matches 1 if score .glowing game matches 1 run effect give @a[tag=alive] glowing infinite 1 true
 
     execute if score .game game matches 0 run tag @a remove alive
+

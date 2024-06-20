@@ -10,3 +10,4 @@ scoreboard players operation .time2 settings *= .20 settings
 schedule function rdm:game/settings/time/reset 4t
 
 data modify entity @e[type=text_display,tag=time,limit=1] text set value '[{"score":{"name":".time","objective":"settings"}}, {"text":" seconds"}]'
+

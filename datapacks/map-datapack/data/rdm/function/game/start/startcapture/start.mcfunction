@@ -9,7 +9,7 @@ kill @e[tag=capturepurple]
 scoreboard players set .purple capture 1
 scoreboard players set .lime capture 1
 
-
+tag @a remove winner
 
 
 
@@ -17,6 +17,7 @@ fill -50 120 3 50 -10 3 barrier
 
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
+kill @e[type=item]
 function rdm:resetgame/resetpillars
 
 fill -4 71 10 4 71 14 minecraft:bedrock

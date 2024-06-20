@@ -5,13 +5,13 @@ function rdm:game/start/resetmap
 scoreboard objectives remove ylevel
 scoreboard objectives add ylevel dummy
 
-
+tag @a remove winner
 
 #fill 11 90 3 -11 55 3 barrier
 execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
 tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
-
+kill @e[type=item]
 function rdm:resetgame/resetpillars
 
 fill -50 120 3 50 -10 3 barrier

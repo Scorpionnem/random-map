@@ -18,4 +18,8 @@ data modify entity @e[tag=winstat,limit=1] text set value '[{"text":"0 Wins"}]'
 execute as @s if score @s winstat matches 0.. at @s run data modify entity @e[tag=winstat,limit=1] text set value '[{"score":{"name":".winstat","objective":"winstat"}}, {"text":" Wins"}]'
 
 
+
+execute as @s run item replace entity 5abe0c96-a167-4cdf-ba8d-6ed64a3abe51 container.0 with air
+execute as @s[tag=winner] run item replace entity 5abe0c96-a167-4cdf-ba8d-6ed64a3abe51 container.0 with paper[custom_model_data=11]
+
 execute as @s run loot replace entity 480d7feb-d1da-4d39-9600-b4c65069996c container.0 loot rdm:player_head/get_head
