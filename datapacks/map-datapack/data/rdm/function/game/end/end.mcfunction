@@ -35,3 +35,6 @@ team modify Neutral collisionRule never
 fill 11 90 3 -11 55 3 barrier
 schedule clear rdm:game/glowing
 schedule clear rdm:game/border/moove/moove
+
+place template minecraft:lobby2 11 65 -16
+place template minecraft:lobby1 -37 65 -16

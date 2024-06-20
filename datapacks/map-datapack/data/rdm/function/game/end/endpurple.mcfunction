@@ -29,3 +29,8 @@ team modify Neutral collisionRule never
 scoreboard players set .glowing game 0
 schedule clear rdm:game/glowing
 schedule clear rdm:game/border/moove/moove
+
+place template minecraft:lobby2 11 65 -16
+place template minecraft:lobby1 -37 65 -16
+fill -2 80 -7 -4 80 -9 lime_wool
+fill 4 80 -7 2 80 -9 purple_wool
