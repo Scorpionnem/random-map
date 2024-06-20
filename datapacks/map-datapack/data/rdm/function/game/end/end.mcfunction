@@ -4,7 +4,8 @@ gamemode adventure @a
 scoreboard players set .game game 0
 bossbar set rdm:items visible false
 effect give @a resistance infinite 100 true
-tp @a 0 80 -5
+spawnpoint @a 0 80 -11
+tp @a 0 80 -11 0 0
 worldborder set 100
 worldborder center 0 32
 kill @e[tag=border,type=item_display]
@@ -37,4 +38,7 @@ schedule clear rdm:game/glowing
 schedule clear rdm:game/border/moove/moove
 
 place template minecraft:lobby2 11 65 -16
-place template minecraft:lobby1 -37 65 -16
+place template minecraft:lobby1 -37 66 -16
+fill -5 80 -9 -7 80 -11 grass_block
+fill 5 80 -9 7 80 -11 mycelium
+setblock 0 80 -2 minecraft:polished_blackstone

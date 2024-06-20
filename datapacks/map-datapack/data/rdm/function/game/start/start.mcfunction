@@ -1,7 +1,6 @@
 execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
 execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
-execute as @a at @s run playsound minecraft:entity.ender_dragon.growl ambient @s ~ ~ ~
 
 scoreboard objectives remove ylevel
 scoreboard objectives add ylevel dummy
@@ -59,7 +58,7 @@ tellraw @a {"bold":true,"color":"green","italic":false,"text":"Game starting!"}
 effect clear @a
 effect give @a slowness 2 100 true
 execute as @a run attribute @s minecraft:generic.jump_strength base set 0
-schedule function rdm:game/start/start/starting 2s
+schedule function rdm:game/start/start/starting 1s
 gamerule showDeathMessages true
 gamerule fallDamage true
 team modify Lime collisionRule always

@@ -37,13 +37,14 @@ execute if score .game game matches 0 as @a[tag=!player,tag=!spectator] run func
 
 execute if score .game game matches 1 as @a if entity @s[tag=!player,tag=!spectator,gamemode=!spectator] run gamemode spectator @s
 
-execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_wool run function rdm:game/settings/teams/lime
-execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_wool run function rdm:game/settings/teams/purple
+execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_concrete run function rdm:game/settings/teams/lime
+execute if score .teambutton settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_concrete run function rdm:game/settings/teams/purple
 
-execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_wool run function rdm:game/settings/teams/lime
-execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_wool run function rdm:game/settings/teams/purple
+execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Lime] at @s if block ~ ~-1 ~ lime_concrete run function rdm:game/settings/teams/lime
+execute if score .capture settings matches 1 if score .game game matches 0 as @a[team=!Purple] at @s if block ~ ~-1 ~ purple_concrete run function rdm:game/settings/teams/purple
 
-
+execute if score .game game matches 1 if score .capture settings matches 1 run setblock 0 73 12 air destroy
+execute if score .game game matches 1 if score .capture settings matches 1 run setblock 0 73 52 air destroy
 
 
 execute if score .game game matches 0 run gamemode adventure @a[gamemode=survival]
@@ -91,6 +92,9 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
     execute if score .capture settings matches 1 as @a run scoreboard players remove @s respawn 1
+
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 80..100 run title @s actionbar {"text": "Respawning in 5"}
+    execute if score .capture settings matches 1 as @a if score @s respawn matches 60..80 run title @s actionbar {"text": "Respawning in 4"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 40..60 run title @s actionbar {"text": "Respawning in 3"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 20..40 run title @s actionbar {"text": "Respawning in 2"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 0..20 run title @s actionbar {"text": "Respawning in 1"}

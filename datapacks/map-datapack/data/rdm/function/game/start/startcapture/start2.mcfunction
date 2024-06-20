@@ -4,3 +4,6 @@ execute as @a run attribute @s minecraft:player.block_interaction_range base set
 title @s times 1t 3s 1t
 title @a actionbar "Loading..."
 
+
+
+tellraw @a {"text": }
