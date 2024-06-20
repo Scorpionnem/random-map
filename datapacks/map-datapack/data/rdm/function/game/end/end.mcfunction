@@ -8,7 +8,7 @@ tp @a 0 80 -5
 worldborder set 100
 worldborder center 0 32
 kill @e[tag=border,type=item_display]
-
+execute as @r run function rdm:stats/set
 scoreboard players set .glowing game 0
 effect clear @a
 execute as @a[tag=alive] run tellraw @a ["",{"selector":"@s"},{"text":" won the game!","color":"gold"}]
