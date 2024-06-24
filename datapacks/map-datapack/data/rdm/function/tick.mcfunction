@@ -11,6 +11,7 @@ execute if score .game game matches 1 if score .capture settings matches 1 at @a
 
 execute as @a if score @s ylevel >= @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
+execute if score .game game matches 1 as @a if score @s ylevel matches ..-90 run damage @s 6 minecraft:out_of_world
 
 
 
