@@ -57,6 +57,7 @@ scoreboard players set .button button 0
 tellraw @a {"bold":true,"color":"green","italic":false,"text":"Game starting!"}
 effect clear @a
 effect give @a slowness 2 100 true
+effect give @a resistance 2 100 true
 execute as @a run attribute @s minecraft:generic.jump_strength base set 0
 schedule function rdm:game/start/start/starting 1s
 gamerule showDeathMessages true

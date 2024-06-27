@@ -17,6 +17,11 @@ execute if score #bool interaction matches 1 if score .starting game matches 0 a
 execute if score .zonebutton settings matches 0 if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=zonebutton] at @s run schedule function rdm:game/settings/zone/press 1t
 execute if score .zonebutton settings matches 1 if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=zonebutton] at @s run function rdm:game/settings/zone/press2
 
+execute if score .daynight settings matches 0 if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=daynight] at @s run schedule function rdm:game/settings/daynight/press 1t
+execute if score .daynight settings matches 1 if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=daynight] at @s run function rdm:game/settings/daynight/press2
+
+
+
 execute if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=time] at @s run function rdm:game/settings/time/press2
 
 execute if score #bool interaction matches 1 if score .starting game matches 0 as @s[tag=gamemode,type=interaction] run function rdm:game/settings/gamemode/switch/leftclick

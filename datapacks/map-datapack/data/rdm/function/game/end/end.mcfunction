@@ -43,3 +43,4 @@ fill -5 80 -9 -7 80 -11 grass_block
 fill 5 80 -9 7 80 -11 mycelium
 setblock 0 80 -2 minecraft:polished_blackstone
 fill 6 79 -3 6 79 -2 air
+setblock 19 76 -7 minecraft:polished_blackstone

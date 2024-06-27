@@ -35,3 +35,4 @@ place template minecraft:lobby2 11 65 -16
 place template minecraft:lobby1 -37 66 -16
 setblock 0 80 -2 minecraft:polished_blackstone
 fill 6 79 -3 6 79 -2 air
+setblock 19 76 -7 minecraft:polished_blackstone
