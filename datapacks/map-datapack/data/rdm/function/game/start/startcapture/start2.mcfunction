@@ -6,4 +6,3 @@ title @a actionbar "Loading..."
 
 
 
-tellraw @a {"text": }
