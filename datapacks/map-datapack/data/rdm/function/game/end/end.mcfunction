@@ -47,5 +47,9 @@ setblock 19 76 -7 minecraft:polished_blackstone
 
 
 item replace entity 010f3e26-a07b-4bbd-89dc-6a57aef294fe container.0 with air
-execute store result score .random random run random roll 0..100
+execute store result score .random random run random value 0..100
 execute if score .random random matches 42 run item replace entity 010f3e26-a07b-4bbd-89dc-6a57aef294fe container.0 with paper[minecraft:custom_model_data=23]
+
+tag @a remove captured
+tag @a remove respawning
+tag @a remove canrespawn

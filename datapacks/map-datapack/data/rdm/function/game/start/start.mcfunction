@@ -13,7 +13,8 @@ tp @a[tag=spectator] 0 72 32
 kill @e[type=!text_display,type=!player,type=!item_display,type=!marker,type=!interaction]
 kill @e[type=item]
 function rdm:resetgame/resetpillars
-
+kill @e[tag=capture]
+kill @e[tag=captureitem]
 fill -50 120 3 50 -10 3 barrier
 
 
@@ -38,6 +39,7 @@ execute if score .ffasolo settings matches 1 as @e[sort=random,limit=1,type=mark
 execute if score .ffasolo settings matches 1 at @e[type=marker,tag=middle,tag=pillar] run worldborder center ~ ~
 
 tag @a[tag=player] add alive
+
 
 execute as @a[tag=alive] run scoreboard players add .ingame players 1
 

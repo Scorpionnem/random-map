@@ -1,3 +1,5 @@
+    execute if score .solocapture settings matches 1 as @a if score @s death matches 1.. run function rdm:game/start/startsolocapture/capture/death
+
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 
@@ -7,7 +9,13 @@ execute as @e[tag=border] store result score @s ylevel run data get entity @s Po
 execute if score .game game matches 1 if score .capture settings matches 1 at @a[tag=capturedlime,limit=1] run tp @e[tag=capturelime,type=item_display] ~ ~3 ~ 0 0
 execute if score .game game matches 1 if score .capture settings matches 1 at @a[tag=capturedpurple,limit=1] run tp @e[tag=capturepurple,type=item_display] ~ ~3 ~ 0 0
 
+execute if score .game game matches 1 if score .solocapture settings matches 1 as @a[tag=player,tag=captured] at @s run function rdm:game/start/startsolocapture/capture/checkcapture
 
+execute if score .game game matches 1 if score .solocapture settings matches 1 as @a[tag=player,tag=captured] at @s run function rdm:game/start/startsolocapture/capture/tpitem
+
+
+
+execute if score .game game matches 0 as @a[gamemode=spectator] run gamemode adventure @s
 
 execute as @a if score @s ylevel >= @e[tag=up,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
 execute as @a if score @s ylevel < @e[tag=down,tag=border,limit=1] ylevel run damage @s 2 minecraft:outside_border
@@ -85,20 +93,34 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/startcapture/start2
     execute if score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/startcapture/start
     
-    execute unless score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
-    execute unless score .capture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
+    execute if score .ffasolo settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
+    execute if score .ffasolo settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
 
-    
+    execute if score .teambutton settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/start2
+    execute if score .teambutton settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/start
+
+
+    execute if score .solocapture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 5 run function rdm:game/start/startcapture/start2
+    execute if score .solocapture settings matches 1 if score .starting game matches 1 if score .startingtimer game matches 0 run function rdm:game/start/startsolocapture/start
     
     execute if score .starting game matches 1 run scoreboard players remove .startingtimer game 1
 
     execute if score .capture settings matches 1 as @a run scoreboard players remove @s respawn 1
+    execute if score .solocapture settings matches 1 as @a run scoreboard players remove @s respawn 1
 
     execute if score .capture settings matches 1 as @a if score @s respawn matches 80..100 run title @s actionbar {"text": "Respawning in 5"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 60..80 run title @s actionbar {"text": "Respawning in 4"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 40..60 run title @s actionbar {"text": "Respawning in 3"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 20..40 run title @s actionbar {"text": "Respawning in 2"}
     execute if score .capture settings matches 1 as @a if score @s respawn matches 0..20 run title @s actionbar {"text": "Respawning in 1"}
+
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 80..100 run title @s actionbar {"text": "Respawning in 5"}
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 60..80 run title @s actionbar {"text": "Respawning in 4"}
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 40..60 run title @s actionbar {"text": "Respawning in 3"}
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 20..40 run title @s actionbar {"text": "Respawning in 2"}
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 0..20 run title @s actionbar {"text": "Respawning in 1"}
+
+    execute if score .solocapture settings matches 1 as @a if score @s respawn matches 1 as @s run function rdm:game/respawn
 
     execute if score .capture settings matches 1 if score .lime capture matches 1 as @a[team=Lime,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
     execute if score .capture settings matches 1 if score .purple capture matches 1 as @a[team=Purple,tag=alive] if score @s respawn matches 1 run function rdm:game/respawn
@@ -117,7 +139,9 @@ execute if score .game game matches 0 run effect give @a saturation infinite 2 t
     execute if score .game game matches 1 run scoreboard players set .ingame players 0
     execute if score .game game matches 1 as @a[tag=alive,tag=player] run scoreboard players add .ingame players 1
     execute if score .game game matches 1 if score .ffasolo settings matches 1 if score .ingame players matches ..1 run function rdm:game/end/end
-    
+    execute if score .game game matches 1 if score .solocapture settings matches 1 if score .ingame players matches ..1 run function rdm:game/end/end
+
+
     execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .purpleingame players 0
     execute if score .game game matches 1 if score .teambutton settings matches 1 run scoreboard players set .limeingame players 0
 

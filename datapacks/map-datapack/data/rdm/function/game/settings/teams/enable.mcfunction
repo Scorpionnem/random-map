@@ -7,3 +7,5 @@ data modify entity @e[type=text_display,tag=teamlime,limit=1] text set value '[{
 data modify entity @e[type=text_display,tag=teampurple,limit=1] text set value '[{"text": "Join purple team!","color": "dark_purple"}]'
 item replace entity 99cfaeb6-c080-4680-90d0-f38f0b6b54b5 container.0 with paper[minecraft:custom_model_data=22]
 item replace entity 3b1da529-f4cd-4942-af7a-cd2ea7b8eca2 container.0 with paper[minecraft:custom_model_data=21]
+
+bossbar set rdm:items color green

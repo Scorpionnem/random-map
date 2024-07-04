@@ -32,6 +32,7 @@ execute if score #bool interaction matches 1 as @s[tag=capturepurple,type=intera
 
 execute if score #bool interaction matches 1 as @s[tag=stats,type=interaction] on target as @s run function rdm:stats/set
 
+execute if score #bool interaction matches 1 as @s[tag=capture,tag=!locked] at @s run function rdm:game/start/startsolocapture/capture/capture
 
 
 

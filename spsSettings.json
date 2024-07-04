@@ -3,8 +3,12 @@
   "difficulty": "EASY",
   "cheats": true,
   "invited": [
-    "f1f1ad45-c351-41ce-813b-f9aaf2257bbe"
+    "f1f1ad45-c351-41ce-813b-f9aaf2257bbe",
+    "18c5d3e3-c089-42b1-8504-2d3faa56e1c7",
+    "dff18b42-aafe-416d-9a21-2a14c4a765ee"
   ],
-  "shareResourcePack": false,
-  "oppedPlayers": []
+  "shareResourcePack": true,
+  "oppedPlayers": [
+    "18c5d3e3-c089-42b1-8504-2d3faa56e1c7"
+  ]
 }

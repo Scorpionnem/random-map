@@ -57,7 +57,8 @@ effect give @a resistance 2 100 true
 
 execute as @a run attribute @s minecraft:generic.jump_strength base set 0
 schedule function rdm:game/start/startcapture/starting 1s
-
+kill @e[tag=capture]
+kill @e[tag=captureitem]
 
 gamerule showDeathMessages true
 gamerule fallDamage true
