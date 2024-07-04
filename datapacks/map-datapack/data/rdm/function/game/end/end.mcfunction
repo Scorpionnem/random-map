@@ -53,3 +53,4 @@ execute if score .random random matches 42 run item replace entity 010f3e26-a07b
 tag @a remove captured
 tag @a remove respawning
 tag @a remove canrespawn
+kill @e[tag=respawner]

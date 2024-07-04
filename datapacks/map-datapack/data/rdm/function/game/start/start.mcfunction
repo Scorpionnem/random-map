@@ -73,3 +73,4 @@ execute if score .teambutton settings matches 1 run schedule function rdm:game/g
 execute if score .ffasolo settings matches 1 run schedule function rdm:game/glowing 300s
 execute if score .teambutton settings matches 1 as @a[team=Lime,tag=alive] at @s run setblock ~ ~-1 ~ lime_wool
 execute if score .teambutton settings matches 1 as @a[team=Purple,tag=alive] at @s run setblock ~ ~-1 ~ purple_wool
+kill @e[tag=respawner]

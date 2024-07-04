@@ -2,7 +2,7 @@ say caca
 execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
 execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
-
+kill @e[tag=respawner]
 
 say caca
 
@@ -33,12 +33,12 @@ execute at @e[type=marker,tag=pillar] run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 bedrock rep
 
 execute at @e[type=marker,tag=pillar] run summon interaction ~ ~ ~ {Tags:["capture"]}
 execute at @e[type=marker,tag=pillar] run summon item_display ~ ~.5 ~ {Tags:["captureitem"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":5}}}
-execute as @e[tag=captureitem] as @s store result score @s linktp run random value 1..100
+execute as @e[tag=captureitem] as @s store result score @s linktp run random value 1..1000000000
 scoreboard players set .global link 0
 scoreboard players set @e link 0
 
 execute at @e[type=marker,tag=pillar] run summon marker ~ ~ ~ {Tags:["respawner"]}
-execute as @e[tag=respawner] as @s store result score @s linkrespawn run random value 1..100
+execute as @e[tag=respawner] as @s store result score @s linkrespawn run random value 1..1000000000
 execute as @a at @s run scoreboard players operation @s linkrespawn = @e[tag=respawner,sort=nearest,limit=1] linkrespawn
 
 
@@ -83,3 +83,4 @@ team modify Purple collisionRule always
 team modify Neutral collisionRule always
 kill @e[tag=capturelime]
 kill @e[tag=capturepurple]
+

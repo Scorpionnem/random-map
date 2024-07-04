@@ -3,6 +3,9 @@
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 
+    execute if score .game game matches 1 if score .solocapture settings matches 1 as @e[tag=pillar] at @s run setblock ~ ~ ~ minecraft:air destroy
+
+
 execute as @a store result score @s ylevel run data get entity @s Pos[1]
 execute as @e[tag=border] store result score @s ylevel run data get entity @s Pos[1]
 
