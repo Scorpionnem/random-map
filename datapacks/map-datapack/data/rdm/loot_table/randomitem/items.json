@@ -850,10 +850,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:black_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:black_glazed_terracotta"
     },
     {
@@ -907,10 +903,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:blue_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:blue_dye"
     },
     {
       "type": "minecraft:item",
@@ -1031,10 +1023,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:brown_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:brown_dye"
     },
     {
       "type": "minecraft:item",
@@ -1302,10 +1290,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:creeper_banner_pattern"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:creeper_head"
     },
     {
@@ -1347,10 +1331,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:cyan_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:cyan_dye"
     },
     {
       "type": "minecraft:item",
@@ -1758,10 +1738,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:flower_banner_pattern"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:flower_pot"
     },
     {
@@ -1791,10 +1767,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:glistering_melon_slice"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:globe_banner_pattern"
     },
     {
       "type": "minecraft:item",
@@ -1918,10 +1890,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:gray_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:gray_glazed_terracotta"
     },
     {
@@ -1963,10 +1931,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:green_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:green_dye"
     },
     {
       "type": "minecraft:item",
@@ -2270,10 +2234,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:light_blue_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:light_blue_glazed_terracotta"
     },
     {
@@ -2315,10 +2275,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:light_gray_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:light_gray_dye"
     },
     {
       "type": "minecraft:item",
@@ -2382,10 +2338,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:lime_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:lime_glazed_terracotta"
     },
     {
@@ -2431,10 +2383,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:magenta_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:magenta_dye"
     },
     {
       "type": "minecraft:item",
@@ -2491,10 +2439,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:minecart"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:mojang_banner_pattern"
     },
     {
       "type": "minecraft:item",
@@ -2738,10 +2682,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:orange_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:orange_glazed_terracotta"
     },
     {
@@ -2811,10 +2751,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:pink_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:pink_dye"
     },
     {
       "type": "minecraft:item",
@@ -2990,10 +2926,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:purple_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:purple_glazed_terracotta"
     },
     {
@@ -3091,10 +3023,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:red_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:red_dye"
     },
     {
       "type": "minecraft:item",
@@ -3271,10 +3199,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:skeleton_skull"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:skull_banner_pattern"
     },
     {
       "type": "minecraft:item",
@@ -3654,10 +3578,6 @@
     },
     {
       "type": "minecraft:item",
-      "name": "minecraft:white_dye"
-    },
-    {
-      "type": "minecraft:item",
       "name": "minecraft:white_glazed_terracotta"
     },
     {
@@ -3735,10 +3655,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:yellow_concrete_powder"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:yellow_dye"
     },
     {
       "type": "minecraft:item",
@@ -4223,10 +4139,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:netherite_scrap"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:piglin_banner_pattern"
     },
     {
       "type": "minecraft:item",
@@ -4988,26 +4900,6 @@
     {
       "type": "minecraft:item",
       "name": "minecraft:calibrated_sculk_sensor"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:wayfinder_armor_trim_smithing_template"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:raiser_armor_trim_smithing_template"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:shaper_armor_trim_smithing_template"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:host_armor_trim_smithing_template"
-    },
-    {
-      "type": "minecraft:item",
-      "name": "minecraft:silence_armor_trim_smithing_template"
     },
     {
       "type": "minecraft:item",
@@ -7271,10 +7163,6 @@
 {
   "type": "minecraft:item",
   "name": "minecraft:breeze_rod"
-},
-{
-  "type": "minecraft:item",
-  "name": "minecraft:flow_armor_trim_smithing_template"
 },
 {
   "type": "minecraft:item",

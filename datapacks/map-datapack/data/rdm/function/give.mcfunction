@@ -1,8 +1,15 @@
-execute unless score .capture settings matches 1 run loot give @s[tag=alive,predicate=!rdm:luck] loot rdm:randomitem/items
+execute if score .capture settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitemscapture
 execute if score .capture settings matches 1 run loot give @s[tag=alive,predicate=!rdm:luck] loot rdm:randomitem/captureitems
 
-execute unless score .capture settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitems
-execute if score .capture settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitemscapture
+execute if score .solocapture settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitemscapture
+execute if score .solocapture settings matches 1 run loot give @s[tag=alive,predicate=!rdm:luck] loot rdm:randomitem/captureitems
+
+execute if score .teambutton settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitems
+execute if score .teambutton settings matches 1 run loot give @s[tag=alive,predicate=!rdm:luck] loot rdm:randomitem/items
+
+execute if score .ffasolo settings matches 1 run loot give @s[tag=alive,predicate=rdm:luck] loot rdm:randomitem/luckyitems
+execute if score .ffasolo settings matches 1 run loot give @s[tag=alive,predicate=!rdm:luck] loot rdm:randomitem/items
+
 
 
 
