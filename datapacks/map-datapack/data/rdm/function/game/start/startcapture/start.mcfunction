@@ -35,6 +35,7 @@ execute as @a[tag=player] run gamemode survival @s
 scoreboard players set .game game 1
 
 scoreboard players operation .random timer2 = .time2 settings
+tag @a add ingame
 
 clear @a
 execute as @a run function rdm:give

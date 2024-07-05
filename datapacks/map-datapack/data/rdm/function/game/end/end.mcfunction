@@ -54,3 +54,4 @@ tag @a remove captured
 tag @a remove respawning
 tag @a remove canrespawn
 kill @e[tag=respawner]
+tag @a remove ingame

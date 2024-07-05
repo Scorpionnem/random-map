@@ -35,6 +35,13 @@ execute if score .game game matches 0 as @a if score @s ylevel matches ..65 run 
 execute unless score .ffasolo settings matches 0 run team leave @a[team=!Neutral]
 
 
+execute if score .game game matches 0 as @a[tag=ingame] run gamemode adventure @s
+execute if score .game game matches 0 as @a[tag=ingame] run tp @s 0 80 -5
+execute if score .game game matches 0 as @a[tag=ingame] run clear @s
+execute if score .game game matches 0 as @a[tag=ingame] run tag @s remove ingame
+execute if score .game game matches 1 as @a[tag=!ingame] run gamemode spectator @s
+execute if score .game game matches 1 as @a[tag=!ingame] run tag @s add ingame
+
 
 
 

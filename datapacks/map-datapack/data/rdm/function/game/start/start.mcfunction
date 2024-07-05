@@ -32,6 +32,9 @@ clear @a
 execute as @a run function rdm:give
 bossbar set rdm:items visible true
 bossbar set rdm:items players @a
+tag @a add ingame
+
+
 
 execute if score .teambutton settings matches 1 as @e[sort=random,limit=1,type=marker,tag=pillar] run tag @s add middle
 execute if score .teambutton settings matches 1 at @e[type=marker,tag=middle,tag=pillar] run worldborder center ~ ~
@@ -69,8 +72,8 @@ team modify Purple collisionRule always
 team modify Neutral collisionRule always
 kill @e[tag=capturelime]
 kill @e[tag=capturepurple]
-execute if score .teambutton settings matches 1 run schedule function rdm:game/glowing 300s
-execute if score .ffasolo settings matches 1 run schedule function rdm:game/glowing 300s
+execute if score .teambutton settings matches 1 if score .zonebutton settings matches 1 run schedule function rdm:game/glowing 300s
+execute if score .ffasolo settings matches 1 if score .zonebutton settings matches 1 run schedule function rdm:game/glowing 300s
 execute if score .teambutton settings matches 1 as @a[team=Lime,tag=alive] at @s run setblock ~ ~-1 ~ lime_wool
 execute if score .teambutton settings matches 1 as @a[team=Purple,tag=alive] at @s run setblock ~ ~-1 ~ purple_wool
 kill @e[tag=respawner]

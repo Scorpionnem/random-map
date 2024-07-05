@@ -10,6 +10,7 @@ scoreboard objectives remove ylevel
 scoreboard objectives add ylevel dummy
 
 tag @a remove winner
+tag @a add ingame
 
 #fill 11 90 3 -11 55 3 barrier
 execute as @a at @a run tp @s @e[type=marker,sort=nearest,limit=1]
