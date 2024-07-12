@@ -36,3 +36,5 @@ setblock 0 80 -2 minecraft:polished_blackstone
 fill 6 79 -3 6 79 -2 air
 setblock 19 76 -7 minecraft:polished_blackstone
 tag @a remove ingame
+
+setworldspawn 0 80 -5 0

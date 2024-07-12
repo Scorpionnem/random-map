@@ -1,10 +1,9 @@
-say caca
+
 execute as @a run attribute @s minecraft:player.entity_interaction_range base set 3
 execute as @a run attribute @s minecraft:player.block_interaction_range base set 4.5
 function rdm:game/start/resetmap
 kill @e[tag=respawner]
 
-say caca
 
 scoreboard objectives remove ylevel
 scoreboard objectives add ylevel dummy

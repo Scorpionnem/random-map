@@ -55,3 +55,5 @@ tag @a remove respawning
 tag @a remove canrespawn
 kill @e[tag=respawner]
 tag @a remove ingame
+
+setworldspawn 0 80 -5 0
