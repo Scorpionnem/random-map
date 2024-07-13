@@ -34,4 +34,6 @@ execute if score #bool interaction matches 1 as @s[tag=stats,type=interaction] o
 
 execute if score #bool interaction matches 1 as @s[tag=capture,tag=!locked] at @s run function rdm:game/start/startsolocapture/capture/capture
 
+execute if score #bool interaction matches 1 as @s[tag=discord] on attacker run function rdm:discord
+
 execute if score #bool interaction matches 1 run data remove entity @s attack

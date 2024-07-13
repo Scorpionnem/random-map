@@ -1,5 +1,6 @@
     execute if score .solocapture settings matches 1 as @a if score @s death matches 1.. run function rdm:game/start/startsolocapture/capture/death
 
+
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=spectator] run title @s actionbar {"text": "You will be spectating.","color": "red"}
     execute if score .game game matches 0 unless score .starting game matches 1 as @a[tag=player] run title @s actionbar {"text": "You will be playing.","color": "green"}
 

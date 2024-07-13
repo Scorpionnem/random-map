@@ -1,0 +1,2 @@
+tellraw @s [{"color":"blue","text":"Join our discord! "},{"bold":true,"clickEvent":{"action":"open_url","value":"https://discord.gg/xCV4mj2n3J"},"color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Click me!","color":"blue"}]},"text":"https://discord.gg/xCV4mj2n3J"}]
+playsound minecraft:block.note_block.bit ambient @s 0 84 0 4 2
