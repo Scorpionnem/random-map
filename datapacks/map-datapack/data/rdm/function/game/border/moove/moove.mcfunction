@@ -1,7 +1,6 @@
 execute if score @e[tag=border,tag=down,limit=1] ylevel matches ..70 as @e[tag=border,tag=down] at @s run tp @s ~ ~1 ~
 execute if score @e[tag=border,tag=up,limit=1] ylevel matches 80.. as @e[tag=border,tag=up] at @s run tp @s ~ ~-1 ~
 
-
 execute if score @e[tag=border,tag=up,limit=1] ylevel matches 79 run item replace entity @e[type=minecraft:item_display,tag=border,tag=up] container.0 with paper[minecraft:custom_model_data=13]
 execute if score @e[tag=border,tag=down,limit=1] ylevel matches 71 run item replace entity @e[type=minecraft:item_display,tag=border,tag=down] container.0 with paper[minecraft:custom_model_data=13]
 
